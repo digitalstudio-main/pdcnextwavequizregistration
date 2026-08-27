@@ -355,21 +355,19 @@ tr:hover td{background:rgba(255,255,255,.03);}
 
       <form id="regForm">
         <div class="field">
-          <label>Full Name <span class="req">*</span> <span class="example">e.g. Ananya Roy</span></label>
+          <label>Full Name <span class="req">*</span> </label>
           <input type="text" id="fname" placeholder="e.g. Ananya Roy">
           <div class="err" id="err-fname">নাম লিখুন</div>
         </div>
 
         <div class="field">
-          <label>Date of Birth <span class="req">*</span> <span class="example">DD/MM/YYYY, e.g. 14/08/2005</span></label>
+          <label>Date of Birth <span class="req">*</span> </label>
           <input type="text" id="fdob" placeholder="DD/MM/YYYY" inputmode="numeric" maxlength="10">
-          <div class="err" id="err-fdob">সঠিক ফরম্যাটে জন্মতারিখ দিন (DD/MM/YYYY)</div>
         </div>
 
         <div class="field">
           <label>College / University <span class="req">*</span></label>
           <input type="text" id="fcollege" placeholder="Your college / university name">
-          <div class="err" id="err-fcollege">প্রতিষ্ঠানের নাম লিখুন</div>
         </div>
 
         <div class="field">
@@ -387,31 +385,27 @@ tr:hover td{background:rgba(255,255,255,.03);}
             <option>PG STUDENT</option>
             <option>PASSED OUT</option>
           </select>
-          <div class="err" id="err-fsemester">সেমিস্টার সিলেক্ট করুন</div>
         </div>
 
         <div class="field">
           <label>Address <span class="req">*</span></label>
           <textarea id="faddress" placeholder="Your full address"></textarea>
-          <div class="err" id="err-faddress">ঠিকানা লিখুন</div>
         </div>
 
         <div class="field">
-          <label>Contact Number <span class="req">*</span> <span class="example">e.g. 98XXXXXXXX</span></label>
+          <label>Contact Number <span class="req">*</span> </label>
           <input type="tel" id="fphone" placeholder="98XXXXXXXX">
-          <div class="err" id="err-fphone">সঠিক ১০ সংখ্যার নম্বর দিন</div>
         </div>
 
         <div class="field">
-          <label>WhatsApp Number <span class="req">*</span> <span class="example">e.g. 98XXXXXXXX</span></label>
+          <label>WhatsApp Number <span class="req">*</span> </label>
           <input type="tel" id="fwhatsapp" placeholder="98XXXXXXXX">
-          <div class="err" id="err-fwhatsapp">সঠিক ১০ সংখ্যার নম্বর দিন</div>
         </div>
 
         <div class="field">
-          <label>Email ID <span class="req">*</span> <span class="example">e.g. ananya.roy@email.com</span></label>
+          <label>Email ID <span class="req">*</span> </label>
           <input type="email" id="femail" placeholder="ananya.roy@email.com">
-          <div class="err" id="err-femail">সঠিক ইমেইল আইডি দিন</div>
+          
         </div>
 
         <div class="field">
@@ -419,14 +413,14 @@ tr:hover td{background:rgba(255,255,255,.03);}
           <label class="upload-box" id="uploadBox">
             <input type="file" id="fproof" accept="image/*">
             <div class="u-icon">📎</div>
-            <div class="u-text">ছবি আপলোড করতে ক্লিক করুন</div>
+            <div class="u-text">Click to upload photo</div>
             <div class="u-hint">Image size min 20 KB and max 1 MB — only 1 image allowed</div>
           </label>
           <div class="upload-preview" id="uploadPreview">
             <img id="previewImg" src="" alt="preview">
             <span class="u-name" id="previewName"></span>
           </div>
-          <div class="err" id="err-fproof">সঠিক সাইজের একটি ছবি আপলোড করুন (20KB–1MB)</div>
+          <div class="err" id="err-fproof">Please Upload Correct image size (20KB–1MB)</div>
         </div>
 
         <div class="consent">
@@ -693,7 +687,7 @@ regForm.addEventListener('submit', async (e) => {
     document.getElementById('successView').style.display = 'block';
     document.getElementById('successView').scrollIntoView({behavior:'smooth', block:'start'});
   } catch (err) {
-    topErr.textContent = 'দুঃখিত, একটি সমস্যা হয়েছে। আবার চেষ্টা করুন।';
+    topErr.textContent = 'Registration from this Phone Number or Email Already had done';
     topErr.style.display = 'block';
     console.error(err);
   } finally {
